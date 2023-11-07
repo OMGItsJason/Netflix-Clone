@@ -1,0 +1,314 @@
+@font-face {
+  font-family: NetflixSans-Light;
+  src: url("/fonts/NetflixSans-Light.otf");
+}
+@font-face {
+  font-family: NetflixSans-Regular;
+  src: url("/fonts/NetflixSans-Regular.otf");
+}
+@font-face {
+  font-family: NetflixSans-Medium;
+  src: url("/fonts/NetflixSans-Medium.otf");
+}
+@font-face {
+  font-family: NetflixSans-Bold;
+  src: url("/fonts/NetflixSans-Bold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: NetflixSans-Regular;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/img/netflix-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 15px 15%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.netflix-logo {
+  width: 200px;
+}
+
+nav button {
+  border: 0;
+  outline: 0;
+  background: #c11119;
+  color: #fff;
+  font-family: NetflixSans-Bold;
+  padding: 13px 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.language-btn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 10px 10px;
+}
+
+.language-btn img {
+  width: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header-content h1 {
+  font-size: 56px;
+  line-height: 70px;
+  font-family: NetflixSans-Bold;
+}
+
+.header-content h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: NetflixSans-Regular;
+}
+
+.header-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: NetflixSans-Regular;
+}
+
+.email-signup input {
+  background: transparent
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  height: 65px;
+  width: 400px;
+  font-size: 20px;
+  color: #fff;
+  font-family: NetflixSans-Regular;
+  border-radius: 5px;
+  margin-left: 30px;
+  padding: 20px 20px;
+}
+
+.email-signup button {
+  background-color: #c11119;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 18px;
+  padding: 20px 30px;
+  font-family: NetflixSans-Bold;
+  margin-left: 10px;
+}
+
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.submit-btn img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.features {
+  padding: 50px 15%;
+  font-size: 24px;
+  border-top: 5px solid #333;
+}
+
+.features h2 {
+  font-size: 50px;
+  font-family: NetflixSans-Bold;
+  margin-bottom: 30px;
+}
+
+.features p {
+  font-size: 23px;
+  font-family: NetflixSans-Regular;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.text {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.media {
+  position: relative;
+}
+
+.media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 70px;
+  margin-top: 95px;
+  width: 77%;
+  border-radius: 5px;
+}
+
+.media1 video {
+  margin-left: 100px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.about {
+  padding: 10px 15%;
+  text-align: center;
+  font-size: 20;
+  border-top: 5px solid #333;
+}
+
+.about h2 {
+  font-size: 62px;
+  font-family: NetflixSans-Bold;
+}
+
+.according {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.according li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.according li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 20px;
+  font-family: NetflixSans-Medium;
+  background: #414141;
+  margin-bottom: 2px;
+  position: relative;
+}
+
+label::after {
+  content: "+";
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  font-family: NetflixSans-Light;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.according .content {
+  background: #414141;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.according input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.according input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+
+.about .email-signup {
+  max-width: 1000px;
+  margin: 20px auto 60px;
+}
+
+.footer h2 {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.footer {
+  border-top: 5px solid #333;
+  color: #777;
+}
+
+.footer .col {
+  flex-basis: 25%;
+  flex-grow: 2;
+  margin-bottom: 50px;
+}
+
+.footer .col a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer .row {
+  align-items: flex-start;
+  padding: 10px 0;
+}
+
+.footer .language-btn {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.copyright-txt {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: NetflixSans-Light;
+}
+
+/*--In Progress--
+--This Is For Reponsiveness--
+
+@media only screen and (max-width: 600px) {
+  .netflix-logo {
+    width: 20%;
+  }
+  nav button {
+    padding: 5px 10px;
+  }
+  nav .language-btn {
+    padding: 5px 10px;
+  }
+}*/
